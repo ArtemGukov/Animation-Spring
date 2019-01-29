@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ft-hV-fZS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Circle-->
+        <scene sceneID="rlA-Fv-Qcf">
+            <objects>
+                <viewController id="jEU-0L-fP5" customClass="AnimationVCTwo" customModule="Animation_Spring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LKb-7H-zBO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcs-79-Ct3" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="52" y="90" width="270" height="270"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation Spring" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwA-Bp-yEA">
+                                        <rect key="frame" x="42.5" y="120" width="185" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.58519445420000005" blue="0.4650528887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pwA-Bp-yEA" firstAttribute="centerY" secondItem="lcs-79-Ct3" secondAttribute="centerY" id="6St-Cp-KdB"/>
+                                    <constraint firstItem="pwA-Bp-yEA" firstAttribute="centerX" secondItem="lcs-79-Ct3" secondAttribute="centerX" id="lcJ-QL-rF9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhW-fQ-Ngh" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="52" y="490" width="270" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.58519445420000005" blue="0.4650528887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Run">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonActionCircle:" destination="jEU-0L-fP5" eventType="touchUpInside" id="QMQ-3F-Zh5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JhW-fQ-Ngh" firstAttribute="width" secondItem="lcs-79-Ct3" secondAttribute="width" id="3zP-4i-bLx"/>
+                            <constraint firstItem="JhW-fQ-Ngh" firstAttribute="leading" secondItem="QUb-zx-Nir" secondAttribute="leading" constant="52" id="UBy-r8-24x"/>
+                            <constraint firstItem="JhW-fQ-Ngh" firstAttribute="centerX" secondItem="lcs-79-Ct3" secondAttribute="centerX" id="ZVt-ke-3Ly"/>
+                            <constraint firstAttribute="bottom" secondItem="lcs-79-Ct3" secondAttribute="bottom" constant="307" id="ZVv-7X-bFa"/>
+                            <constraint firstItem="lcs-79-Ct3" firstAttribute="leading" secondItem="QUb-zx-Nir" secondAttribute="leading" constant="52" id="i58-Pf-dt6"/>
+                            <constraint firstItem="lcs-79-Ct3" firstAttribute="top" secondItem="QUb-zx-Nir" secondAttribute="top" constant="70" id="ihi-oP-aFq"/>
+                            <constraint firstItem="QUb-zx-Nir" firstAttribute="trailing" secondItem="JhW-fQ-Ngh" secondAttribute="trailing" constant="53" id="jAM-5Z-P6F"/>
+                            <constraint firstItem="QUb-zx-Nir" firstAttribute="bottom" secondItem="JhW-fQ-Ngh" secondAttribute="bottom" constant="86" id="oft-II-yH8"/>
+                            <constraint firstItem="QUb-zx-Nir" firstAttribute="trailing" secondItem="lcs-79-Ct3" secondAttribute="trailing" constant="53" id="xl0-nT-x2E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QUb-zx-Nir"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Circle" image="circular" id="IDM-vV-QdD"/>
+                    <connections>
+                        <outlet property="buttonAnimationCircle" destination="JhW-fQ-Ngh" id="VGR-fQ-Yfd"/>
+                        <outlet property="labelAnimationCircle" destination="pwA-Bp-yEA" id="hny-NJ-ACn"/>
+                        <outlet property="viewAnimationCircle" destination="lcs-79-Ct3" id="iwZ-Wm-nc0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pU-UE-Nof" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="3242"/>
+        </scene>
+        <!--Square-->
+        <scene sceneID="sIN-kA-NFV">
+            <objects>
+                <viewController id="10z-xG-f9M" customClass="AnimationVC" customModule="Animation_Spring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fLk-I8-aPk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="skv-DS-Y1Z" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="52" y="490" width="270" height="42"/>
+                                <color key="backgroundColor" red="0.2052361969" green="0.66664952109999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="hGP-KV-NAc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Run">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonActionSquare:" destination="10z-xG-f9M" eventType="touchUpInside" id="fnq-F2-h2m"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePT-Zk-lau" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="52" y="90" width="270" height="270"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Animation Spring" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-go-MaV">
+                                        <rect key="frame" x="25" y="117" width="221" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="X36-B7-vxD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2052361969" green="0.66664952109999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="WgW-go-MaV" firstAttribute="centerY" secondItem="ePT-Zk-lau" secondAttribute="centerY" id="4WG-vU-wm5"/>
+                                    <constraint firstItem="WgW-go-MaV" firstAttribute="leading" secondItem="ePT-Zk-lau" secondAttribute="leading" constant="25" id="Yfi-Rc-tWK"/>
+                                    <constraint firstItem="WgW-go-MaV" firstAttribute="centerX" secondItem="ePT-Zk-lau" secondAttribute="centerX" id="iwI-mb-QC3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ePT-Zk-lau" firstAttribute="leading" secondItem="v9h-fB-Wye" secondAttribute="leading" constant="52" id="QLK-lP-LYR"/>
+                            <constraint firstItem="v9h-fB-Wye" firstAttribute="bottom" secondItem="skv-DS-Y1Z" secondAttribute="bottom" constant="86" id="Ykr-Wl-G1b"/>
+                            <constraint firstItem="skv-DS-Y1Z" firstAttribute="centerX" secondItem="ePT-Zk-lau" secondAttribute="centerX" id="Zys-S0-2Mx"/>
+                            <constraint firstItem="v9h-fB-Wye" firstAttribute="trailing" secondItem="ePT-Zk-lau" secondAttribute="trailing" constant="53" id="fHE-mA-wKe"/>
+                            <constraint firstItem="skv-DS-Y1Z" firstAttribute="leading" secondItem="v9h-fB-Wye" secondAttribute="leading" constant="52" id="iqO-8O-N3h"/>
+                            <constraint firstAttribute="bottom" secondItem="ePT-Zk-lau" secondAttribute="bottom" constant="307" id="jZn-IB-82z"/>
+                            <constraint firstItem="ePT-Zk-lau" firstAttribute="top" secondItem="v9h-fB-Wye" secondAttribute="top" constant="70" id="oKy-BP-tno"/>
+                            <constraint firstItem="skv-DS-Y1Z" firstAttribute="width" secondItem="ePT-Zk-lau" secondAttribute="width" id="v0U-ow-HED"/>
+                            <constraint firstItem="v9h-fB-Wye" firstAttribute="trailing" secondItem="skv-DS-Y1Z" secondAttribute="trailing" constant="53" id="zgl-4i-Ndm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v9h-fB-Wye"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Square" image="square" id="3bT-VX-gj7"/>
+                    <connections>
+                        <outlet property="buttonAnimationSquare" destination="skv-DS-Y1Z" id="o6K-qK-Ppu"/>
+                        <outlet property="labelAnimationSquare" destination="WgW-go-MaV" id="5qJ-X5-Oav"/>
+                        <outlet property="viewAnimationSquare" destination="ePT-Zk-lau" id="Evc-AI-rdB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHO-bJ-kMY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1353" y="2577"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="OHX-AS-lKA">
+            <objects>
+                <tabBarController id="2ft-hV-fZS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="beF-Ip-zwp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="10z-xG-f9M" kind="relationship" relationship="viewControllers" id="dVN-ee-v5e"/>
+                        <segue destination="jEU-0L-fP5" kind="relationship" relationship="viewControllers" id="gwJ-k3-FQL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rWc-cy-CaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="403" y="2910"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circular" width="19.200000762939453" height="19.200000762939453"/>
+        <image name="square" width="19.200000762939453" height="19.200000762939453"/>
+    </resources>
+    <color key="tintColor" red="0.2052361969" green="0.66664952109999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
